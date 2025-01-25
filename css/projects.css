@@ -1,0 +1,243 @@
+.project {
+  height: 100vh;
+  margin-top: 15rem;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+/* project grids */
+.card-01,
+.card-02,
+.card-03,
+.card-04,
+.card-05,
+.card-06 {
+  user-select: none;
+
+  & .card-image,
+  .gif-image,
+  .card-info {
+    border-radius: 20px;
+  }
+}
+
+.card-01 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+
+  display: grid;
+
+  & .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: 1 / 1;
+  }
+
+  & .card-info {
+    grid-area: 1 / 1;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 4rem 8rem;
+    transition: opacity 0.5s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    & h4,
+    & p,
+    & a {
+      text-align: center;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.5s ease;
+      color: #fff;
+    }
+
+    & p {
+      font-size: clamp(1.6rem, 2.4rem, 2.8rem);
+    }
+  }
+
+  &:hover .card-info {
+    opacity: 1;
+
+    & h4,
+    & p,
+    & a {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+.card-02 {
+  grid-column: 4 / 7;
+  grid-row: 1 / 4;
+
+  display: grid;
+
+  & .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: 1 / 1;
+  }
+
+  & .card-info {
+    grid-area: 1 / 1;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 4rem 8rem;
+    transition: opacity 0.5s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    & h4,
+    & p,
+    & a {
+      color: #fff;
+      text-align: center;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    & p {
+      font-size: clamp(1.6rem, 2.4rem, 2.8rem);
+    }
+  }
+
+  &:hover .card-info {
+    opacity: 1;
+
+    & h4,
+    & p,
+    & a {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+.card-03 {
+  grid-column: 3 / 5;
+  grid-row: 4 / 6;
+
+  display: grid;
+
+  & .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: 1 / 1;
+  }
+
+  & .card-info {
+    grid-area: 1 / 1;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 4rem 8rem;
+    transition: opacity 0.5s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    & h4,
+    & p,
+    & a {
+      text-align: center;
+      color: #fff;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    & p {
+      font-size: clamp(1.6rem, 2.4rem, 2.8rem);
+    }
+  }
+
+  &:hover .card-info {
+    opacity: 1;
+
+    & h4,
+    & p,
+    & a {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+/* non projects grids */
+.card-04 {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  min-height: 0;
+
+  & .gif-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.card-05 {
+  grid-column: 1 / 3;
+  grid-row: 4 / 6;
+  min-height: 0;
+
+  & .gif-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.card-06 {
+  grid-column: 5 / 7;
+  grid-row: 4 / 6;
+  min-height: 0;
+
+  & .gif-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card-04,
+  .card-05,
+  .card-06 {
+    display: none;
+  }
+
+  .project {
+    height: 100%;
+    margin-top: 8rem;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card-01,
+  .card-02,
+  .card-03 {
+    & .card-info {
+      padding: 2rem 3rem;
+    }
+  }
+}

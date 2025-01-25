@@ -1,0 +1,10 @@
+/* animation for static tv effect */
+@keyframes static {
+    0% {
+      transform: translateX(10%) translateY(10%);
+    }
+  
+    100% {
+      transform: translateX(-10%) translateY(-10%);
+    }
+  }

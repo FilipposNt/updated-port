@@ -1,0 +1,78 @@
+.about {
+  display: grid;
+
+  margin-top: 12rem;
+  user-select: none;
+}
+
+/* Header */
+.about__header {
+  margin-bottom: 1rem;
+}
+.about__header-title {
+  font-size: 2.4rem;
+  font-family: "Noto Serif", serif;
+  color: #000;
+}
+
+/* Information */
+
+.about__info-para {
+  font-size: clamp(1.8rem, 2.4rem, 3rem);
+  color: #000;
+  line-height: 1.6;
+}
+
+/* skills */
+.skills__header {
+  font-size: 2.4rem;
+  font-family: "Noto Serif", serif;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 6rem;
+}
+
+.about__header-skills {
+  display: flex;
+}
+
+.about__header-skills ul {
+  padding: 3rem 4rem;
+  list-style: none;
+
+  display: flex;
+  text-align: center;
+
+  gap: 5rem;
+
+  & img {
+    width: 100%;
+    transform: scale(1.4);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about {
+    margin-top: 8rem;
+  }
+
+  .about__info-para {
+    line-height: 1.1;
+  }
+
+  .about__header-skills ul {
+    padding: 3rem 4rem;
+    list-style: none;
+
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+
+    & img {
+    }
+  }
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F | Frontend Developer</title>
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>   
+    <main class="container">
+      <!-- home -->
+      <section class="home">
+        <div class="home__name">
+          <div>
+            <h1>Hi I'm</h1>
+            <h1 class="special-f">Filippos</h1>
+          </div>
+
+          <p class="">Frontend Developer</p>
+        </div>
+      </section>
+
+      <!-- about -->
+      <section class="about">
+        <div class="about__header">
+          <div class="about__header-title">
+            <h2>About me</h2>
+          </div>
+        </div>
+
+        <div class="about__info">
+          <div class="about__info-para">
+            <p>
+              I am a dedicated front-end developer and UI/UX
+              designer(sometimes), passionate about crafting visually appealing
+              and user-centric digital experiences. With a deep understanding of
+              both design principles and web development technologies, i bridge
+              the gap between aesthetics and functionality. My approach to
+              design prioritizes user experiences, ensuring that every
+              interaction feels seemless and intuitive.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="skills__header">
+          <h2>Skills</h2>
+          <div class="about__header-skills">
+            <ul>
+              <li><img src="/images/skills/icons8-html-logo-48.png" alt=""></li>              
+              <li><img src="/images/skills/icons8-css-logo-48.png" alt=""></li>              
+              <li><img src="/images/skills/icons8-javascript-48.png" alt=""></li>              
+              <li><img src="/images/skills/icons8-node-js-64.png" alt=""></li>              
+              <li><img src="/images/skills/icons8-webflow-48.png" alt=""></li>              
+              <li><img src="/images/skills/icons8-react-40.png" alt=""></li>              
+              <li><img src="/images/skills/icons8-figma-48.png" alt=""></li>              
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- projects -->
+      <section class="project">
+
+        <div class="card-01">
+          <img class="card-image" src="/images/10m-21_generated.jpg" />
+          <div class="card-info">
+            <h4>Civil Engineer's Website</h4>
+            <p>
+              This project is a simple, responsive website that helps
+                  visualize and track civil engineering projects.
+            </p>
+            <a class="link-btn" target="_blank"
+            href="https://morfouli-studio.gr/">Live</a>
+          </div>
+        </div>
+
+        <div class="card-02">
+          <img
+            class="card-image"
+            src="/images/vecteezy_free-travel-time-vector_107773.jpg"
+          />
+          <div class="card-info">
+            <h4>Travel Agency Website</h4>
+            <p>
+              This is a prototype project about a travel agency website.
+            </p>
+            <a class="link-btn" target="_blank"
+            href="https://jade-mochi-9e20d7.netlify.app/">Live</a>
+          </div>
+        </div>
+
+        <div class="card-03">
+          <img
+            class="card-image"
+            src="/images/vecteezy_rocket-launch-spaceship-flying-up-to-night-sky_17535775.jpg"
+          />
+          <div class="card-info">
+            <h4>Asteroid game</h4>
+            
+            <a class="link-btn" href="https://ubiquitous-empanada-f7e712.netlify.app/" target="_blank">Live</a>
+          </div>
+        </div>
+
+        <!-- non project grids -->
+        <div class="card-04">
+            <img class="gif-image" src="/Coding Game Dev GIF by King Of Destiny.gif" alt="">
+          </div>
+        </div>
+        <div class="card-05">
+          <img class="gif-image" src="/block.gif" alt="">
+
+        </div>
+        <div class="card-06">
+          <img class="gif-image" src="/css GIF.gif" alt="">
+
+        </div>
+      </section>
+
+      <!-- contact -->
+      <section  class="contact">       
+        <!-- form -->
+        <div class="contact__form">
+          <form id="form" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="876db7e3-96cc-480d-9fb9-c546c0a0fd0a"
+            />
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              class="feedback-input"
+              placeholder="Name"
+              required
+            />
+            <input
+              id="email"
+              name="email"
+              type="text"
+              class="feedback-input"
+              placeholder="Email"
+              required
+            />
+            <textarea
+              id="text"
+              name="text"
+              class="feedback-input"
+              placeholder="Describe your idea or say hello&#128512;"
+              required
+            ></textarea>
+            <input type="submit" value="Submit" />
+
+            <div id="result"></div>
+          </form>
+        </div>
+
+        <!-- socials -->
+        <div class="social">
+          <h4>Linkedin</h4>
+          <a href="https://www.linkedin.com/in/filippos-n/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+          
+         </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- form -->
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script>
+    const form = document.getElementById("form");
+    const result = document.getElementById("result");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      result.innerHTML = "Please wait...";
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      })
+        .then(async (response) => {
+          let json = await response.json();
+          if (response.status == 200) {
+            result.innerHTML = "Form submitted successfully";
+          } else {
+            console.log(response);
+            result.innerHTML = json.message;
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+          result.innerHTML = "Something went wrong!";
+        })
+        .then(function () {
+          form.reset();
+          setTimeout(() => {
+            result.style.display = "none";
+          }, 3000);
+        });
+    });
+  </script>
+    </main>
+  </body>
+</html>

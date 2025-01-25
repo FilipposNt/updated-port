@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #fff;
+  background-image: radial-gradient(#999 5%, transparent 0);
+  background-size: 35px 35px;
+
+  height: 100%;
+  max-width: 100%;
+
+  padding: 3% 20%;
+}
+
+.container {
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    padding: 4rem 5rem;
+  }
+}
